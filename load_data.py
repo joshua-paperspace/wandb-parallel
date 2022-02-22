@@ -17,7 +17,7 @@ def load_data(config):
                                         download=True, transform=transform)
 
     test_val_split = 0.8
-    test_size, val_size = int(len(testset) * test_val_split), int(len(testset) * (1-test_val_split)), 
+    test_size, val_size = int(len(testset) * test_val_split), int(len(testset) * (1-test_val_split)) + 1
 
     testset, valset = random_split(testset,[test_size, val_size])
 
@@ -26,6 +26,8 @@ def load_data(config):
 
     valloader = torch.utils.data.DataLoader(valset, batch_size=config['batch_size'],
                                             shuffle=False, num_workers=2)
+
+    return trainloader, valloader, testloader
 
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
