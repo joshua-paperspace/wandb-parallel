@@ -4,8 +4,7 @@ import os
 import json
 import sys, getopt
 
-def main(args):
-
+def main(argv):
     try:
         opts, args = getopt.getopt(argv,"c:",["config="])
     except:
