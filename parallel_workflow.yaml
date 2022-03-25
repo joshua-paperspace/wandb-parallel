@@ -47,8 +47,6 @@ jobs:
         ls /inputs
         echo ls /inputs/configs/
         ls /inputs/configs/
-        echo ls /inputs/configs/data/
-        ls /inputs/configs/data/
         pip install wandb -q
         python wandb_sweep.py -c config1
     needs:
