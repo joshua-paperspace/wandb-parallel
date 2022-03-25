@@ -15,7 +15,7 @@ def main(argv):
         if opt in ('-c', '--config'):
             config_name = arg
 
-    with open('/inputs/configs/' + config_name + '.json') as json_file:
+    with open('/inputs/configs/data/' + config_name + '.json') as json_file:
         sweep_config = json.load(json_file)
 
     sweep_id = wandb.sweep(sweep_config, project="prallel-project")
