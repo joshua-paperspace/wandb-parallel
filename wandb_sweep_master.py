@@ -1,5 +1,4 @@
 from train import train
-import wandb
 import os
 import json
 
@@ -44,13 +43,13 @@ def main():
                     }
     }
 
-    with open("config1.json", "w") as outfile:
+    with open("configs/config1.json", "w") as outfile:
         json.dump(sweep_config_1, outfile)
 
-    with open("config2.json", "w") as outfile:
+    with open("configs/config2.json", "w") as outfile:
         json.dump(sweep_config_2, outfile)
 
-    with open("config3.json", "w") as outfile:
+    with open("configs/config3.json", "w") as outfile:
         json.dump(sweep_config_3, outfile)
     
 
