@@ -57,7 +57,7 @@ jobs:
       configs:
         type: dataset
         with:
-          ref: dsrzkbpudtxoz5q
+          ref: dsxbr4wc9x8ttbv
     resources:
       instance-type: A6000
   WandBSweep2:
@@ -76,7 +76,7 @@ jobs:
       configs:
         type: dataset
         with:
-          ref: dsrzkbpudtxoz5q
+          ref: dsxbr4wc9x8ttbv
     resources:
       instance-type: A6000
   WandBSweep3:
@@ -95,6 +95,6 @@ jobs:
       configs:
         type: dataset
         with:
-          ref: dsrzkbpudtxoz5q
+          ref: dsxbr4wc9x8ttbv
     resources:
       instance-type: A6000
