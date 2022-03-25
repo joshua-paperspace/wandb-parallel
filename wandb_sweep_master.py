@@ -9,10 +9,8 @@ def main():
                 'metric': {'goal': 'minimize', 'name': 'val_loss'},
                 'parameters': {
                     'batch_size': {'value': 32},
-                    'epochs': {'value': 5},
-                    'lr': {'distribution': 'uniform',
-                                      'max': 1e-2,
-                                      'min': 1e-4},
+                    'epochs': {'values': [5, 10]},
+                    'lr': {'values': [1e-2, 1e-3, 1e-4]},
                     'model': {'value': 'ResNet18'}
                     }
     }
@@ -22,10 +20,8 @@ def main():
                 'metric': {'goal': 'minimize', 'name': 'val_loss'},
                 'parameters': {
                     'batch_size': {'value': 64},
-                    'epochs': {'value': 5},
-                    'lr': {'distribution': 'uniform',
-                                      'max': 1e-2,
-                                      'min': 1e-4},
+                    'epochs': {'values': [5, 10]},
+                    'lr': {'values': [1e-2, 1e-3, 1e-4]},
                     'model': {'value': 'ResNet18'}
                     }
     }
@@ -35,10 +31,8 @@ def main():
                 'metric': {'goal': 'minimize', 'name': 'val_loss'},
                 'parameters': {
                     'batch_size': {'value': 128},
-                    'epochs': {'value': 5},
-                    'lr': {'distribution': 'uniform',
-                                      'max': 1e-2,
-                                      'min': 1e-4},
+                    'epochs': {'values': [5, 10]},
+                    'lr': {'values': [1e-2, 1e-3, 1e-4]},
                     'model': {'value': 'ResNet18'}
                     }
     }

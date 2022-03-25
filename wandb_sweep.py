@@ -20,7 +20,7 @@ def main(argv):
 
     wandb.login(key='1305ff3ca47ed8cd6735ba50a3b2f6697ff94916')
     sweep_id = wandb.sweep(sweep_config, project="prallel-project")
-    wandb.agent(sweep_id, function=train, count=4)
+    wandb.agent(sweep_id, function=train)
 
     return
 
