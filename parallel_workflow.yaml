@@ -17,13 +17,7 @@ jobs:
         mkdir configs
         pip install wandb -q
         python wandb_sweep_master.py
-        echo ls ./configs
-        ls ./configs
         cp -r ./configs /outputs
-        echo ls /outputs
-        ls /outputs
-        echo ls /outputs/configs
-        ls /outputs/configs
     needs:
       - CloneRepo
     inputs:
@@ -43,10 +37,6 @@ jobs:
       image: nvcr.io/nvidia/pytorch:21.10-py3
       script: |-
         cd /inputs/repo/
-        echo ls /inputs
-        ls /inputs
-        echo ls /inputs/configs/
-        ls /inputs/configs/
         pip install wandb -q
         python wandb_sweep.py -c config1
     needs:
